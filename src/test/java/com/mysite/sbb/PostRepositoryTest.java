@@ -119,6 +119,8 @@ class PostRepositoryTest {
 
         int afterCount = question.getAnswers().size();
 
+        questionRepository.flush(); // 추가된 코드
+
         assertThat(afterCount).isEqualTo(beforeCount + 1);
     }
 }
